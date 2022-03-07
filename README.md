@@ -78,6 +78,9 @@ veja os dados do console nos logs: Exposing 13 endpoint(s) beneath base path '/a
 depois de liberados os edpoints nos retorna estes endpoints pelo actuator:
 
 
+http://localhost:8081/actuator
+
+
 {
 "_links": {
 "self": {
