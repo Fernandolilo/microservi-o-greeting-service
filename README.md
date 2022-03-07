@@ -31,6 +31,8 @@ com o actuator;
 
 http://localhost:8081/actuator
 
+para pesquisar sobre o actuator: https://docs.spring.io/spring-boot/docs/2.5.6/reference/html/actuator.html
+
 nos resultará na seguinte informação, veja abaixo:
 
 {
