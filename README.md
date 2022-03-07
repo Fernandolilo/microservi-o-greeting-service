@@ -49,3 +49,12 @@ nos resultará na seguinte informação, veja abaixo:
 }
 }
 }
+
+para verificar se a app esta UP basta verificar o seguinte endpoint:
+
+http://localhost:8081/actuator/health
+
+seu resultado é:
+{
+"status": "UP"
+}
