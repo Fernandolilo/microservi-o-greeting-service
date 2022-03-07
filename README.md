@@ -13,7 +13,7 @@ http://localhost:8081/greeting
 "id": 1,
 "content": "Olá, Mundo!"
 }
-
+-----------------------------------------------------------------------
 
 se eu passar paramentos no endpoint conforme abaixo:
 http://localhost:8081/greeting?name=FernandoSilva
@@ -23,7 +23,7 @@ teremos o seguinte resultado:
 {
 "id": 2,
 "content": "Olá, FernandoSilva!"
-
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 agora vamos verificar se a App esta UP!
 
@@ -60,17 +60,17 @@ seu resultado é:
 {
 "status": "UP"
 }
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 #agora vamos liberar endpoints, para testes e saber sobre os endpoints;
 
-
+----------------
 management:
   endpoints:
     web:
       exposure:
         include:
         - '*'
-        
+-------------------------        
         
 passando estes paramentos no application.yml libera 13 endpoints que estavam bloqueados por padrão do Actuator
 
@@ -167,7 +167,7 @@ http://localhost:8081/actuator
 }
 }
 }
-
+-----------------------------------------------------------------------------------------------------------------------------
 acessando novamente o actuator, http://localhost:8081/actuator
 
 vamos dentro do actuator acessar o endpoint env:
