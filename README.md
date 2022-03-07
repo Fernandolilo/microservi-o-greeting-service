@@ -70,6 +70,6 @@ management:
         - '*'
         
         
-passando estes paramentos no apllication.yml libera 13 endpoints que estavam bloqueados por padrão do Actuator
+passando estes paramentos no application.yml libera 13 endpoints que estavam bloqueados por padrão do Actuator
 
 veja os dados do console nos logs: Exposing 13 endpoint(s) beneath base path '/actuator'
