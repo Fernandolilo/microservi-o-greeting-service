@@ -166,7 +166,505 @@ http://localhost:8081/actuator
 }
 }
 
+acessando novamente o actuator, http://localhost:8081/actuator
 
+vamos dentro do actuator acessar o endpoint env:
+
+veja as inofrmaçoes que nos propoem, as configs de portas, do sistema em geral, 
+{
+"activeProfiles": [],
+"propertySources": [
+{
+"name": "server.ports",
+"properties": {
+"local.server.port": {
+"value": 8081
+}
+}
+},
+{
+"name": "commandLineArgs",
+"properties": {
+"spring.output.ansi.enabled": {
+"value": "always"
+}
+}
+},
+{
+"name": "servletContextInitParams",
+"properties": {}
+},
+{
+"name": "systemProperties",
+"properties": {
+"java.specification.version": {
+"value": "15"
+},
+"sun.cpu.isalist": {
+"value": "amd64"
+},
+"sun.jnu.encoding": {
+"value": "Cp1252"
+},
+"java.class.path": {
+"value": "C:\\temp\\work-Space-microservices\\greeting-service\\target\\classes;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-actuator\\2.5.10\\spring-boot-starter-actuator-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter\\2.5.10\\spring-boot-starter-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-logging\\2.5.10\\spring-boot-starter-logging-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\ch\\qos\\logback\\logback-classic\\1.2.10\\logback-classic-1.2.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\ch\\qos\\logback\\logback-core\\1.2.10\\logback-core-1.2.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-to-slf4j\\2.17.1\\log4j-to-slf4j-2.17.1.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-api\\2.17.1\\log4j-api-2.17.1.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.7.36\\jul-to-slf4j-1.7.36.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\jakarta\\annotation\\jakarta.annotation-api\\1.3.5\\jakarta.annotation-api-1.3.5.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\yaml\\snakeyaml\\1.28\\snakeyaml-1.28.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-actuator-autoconfigure\\2.5.10\\spring-boot-actuator-autoconfigure-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-actuator\\2.5.10\\spring-boot-actuator-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.12.6\\jackson-databind-2.12.6.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.12.6\\jackson-annotations-2.12.6.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.12.6\\jackson-core-2.12.6.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jsr310\\2.12.6\\jackson-datatype-jsr310-2.12.6.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\io\\micrometer\\micrometer-core\\1.7.9\\micrometer-core-1.7.9.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\hdrhistogram\\HdrHistogram\\2.1.12\\HdrHistogram-2.1.12.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\latencyutils\\LatencyUtils\\2.0.3\\LatencyUtils-2.0.3.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-web\\2.5.10\\spring-boot-starter-web-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-json\\2.5.10\\spring-boot-starter-json-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jdk8\\2.12.6\\jackson-datatype-jdk8-2.12.6.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\com\\fasterxml\\jackson\\module\\jackson-module-parameter-names\\2.12.6\\jackson-module-parameter-names-2.12.6.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-tomcat\\2.5.10\\spring-boot-starter-tomcat-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-core\\9.0.58\\tomcat-embed-core-9.0.58.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-el\\9.0.58\\tomcat-embed-el-9.0.58.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.58\\tomcat-embed-websocket-9.0.58.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\spring-web\\5.3.16\\spring-web-5.3.16.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\spring-beans\\5.3.16\\spring-beans-5.3.16.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\spring-webmvc\\5.3.16\\spring-webmvc-5.3.16.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\spring-aop\\5.3.16\\spring-aop-5.3.16.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\spring-context\\5.3.16\\spring-context-5.3.16.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\spring-expression\\5.3.16\\spring-expression-5.3.16.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-devtools\\2.5.10\\spring-boot-devtools-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot\\2.5.10\\spring-boot-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-autoconfigure\\2.5.10\\spring-boot-autoconfigure-2.5.10.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.36\\slf4j-api-1.7.36.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\spring-core\\5.3.16\\spring-core-5.3.16.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\spring-jcl\\5.3.16\\spring-jcl-5.3.16.jar;C:\\Users\\Rcell Asus\\.m2\\repository\\org\\springframework\\boot\\spring-boot-configuration-processor\\2.5.10\\spring-boot-configuration-processor-2.5.10.jar"
+},
+"com.sun.management.jmxremote.authenticate": {
+"value": "false"
+},
+"java.vm.vendor": {
+"value": "Oracle Corporation"
+},
+"sun.arch.data.model": {
+"value": "64"
+},
+"user.variant": {
+"value": ""
+},
+"java.vendor.url": {
+"value": "https://java.oracle.com/"
+},
+"catalina.useNaming": {
+"value": "false"
+},
+"user.timezone": {
+"value": "America/Sao_Paulo"
+},
+"java.vm.specification.version": {
+"value": "15"
+},
+"os.name": {
+"value": "Windows 10"
+},
+"sun.java.launcher": {
+"value": "SUN_STANDARD"
+},
+"user.country": {
+"value": "BR"
+},
+"sun.boot.library.path": {
+"value": "C:\\sts-4.9.0.RELEASE\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\\jre\\bin"
+},
+"com.sun.management.jmxremote.ssl": {
+"value": "false"
+},
+"spring.application.admin.enabled": {
+"value": "true"
+},
+"sun.java.command": {
+"value": "******"
+},
+"com.sun.management.jmxremote": {
+"value": ""
+},
+"jdk.debug": {
+"value": "release"
+},
+"sun.cpu.endian": {
+"value": "little"
+},
+"spring.boot.project.name": {
+"value": "greeting-service"
+},
+"user.home": {
+"value": "C:\\Users\\Rcell Asus"
+},
+"user.language": {
+"value": "pt"
+},
+"java.specification.vendor": {
+"value": "Oracle Corporation"
+},
+"java.version.date": {
+"value": "2021-01-19"
+},
+"java.home": {
+"value": "C:\\sts-4.9.0.RELEASE\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\\jre"
+},
+"file.separator": {
+"value": "\\"
+},
+"java.vm.compressedOopsMode": {
+"value": "32-bit"
+},
+"line.separator": {
+"value": "\r\n"
+},
+"java.vm.specification.vendor": {
+"value": "Oracle Corporation"
+},
+"java.specification.name": {
+"value": "Java Platform API Specification"
+},
+"FILE_LOG_CHARSET": {
+"value": "UTF-8"
+},
+"java.awt.headless": {
+"value": "true"
+},
+"user.script": {
+"value": ""
+},
+"sun.management.compiler": {
+"value": "HotSpot 64-Bit Tiered Compilers"
+},
+"java.runtime.version": {
+"value": "15.0.2+7-27"
+},
+"user.name": {
+"value": "Rcell Asus"
+},
+"spring.jmx.enabled": {
+"value": "true"
+},
+"path.separator": {
+"value": ";"
+},
+"os.version": {
+"value": "10.0"
+},
+"java.runtime.name": {
+"value": "OpenJDK Runtime Environment"
+},
+"file.encoding": {
+"value": "UTF-8"
+},
+"spring.beaninfo.ignore": {
+"value": "true"
+},
+"java.vm.name": {
+"value": "OpenJDK 64-Bit Server VM"
+},
+"java.vendor.url.bug": {
+"value": "https://bugreport.java.com/bugreport/"
+},
+"java.io.tmpdir": {
+"value": "C:\\Users\\RCELLA~1\\AppData\\Local\\Temp\\"
+},
+"catalina.home": {
+"value": "C:\\Users\\Rcell Asus\\AppData\\Local\\Temp\\tomcat.8081.5497301061988462996"
+},
+"com.sun.management.jmxremote.port": {
+"value": "51129"
+},
+"java.version": {
+"value": "15.0.2"
+},
+"user.dir": {
+"value": "C:\\temp\\work-Space-microservices\\greeting-service"
+},
+"os.arch": {
+"value": "amd64"
+},
+"java.vm.specification.name": {
+"value": "Java Virtual Machine Specification"
+},
+"PID": {
+"value": "13352"
+},
+"sun.os.patch.level": {
+"value": ""
+},
+"CONSOLE_LOG_CHARSET": {
+"value": "UTF-8"
+},
+"catalina.base": {
+"value": "C:\\Users\\Rcell Asus\\AppData\\Local\\Temp\\tomcat.8081.5497301061988462996"
+},
+"java.library.path": {
+"value": "C:\\sts-4.9.0.RELEASE\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\\jre\\bin;C:\\WINDOWS\\Sun\\Java\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:/sts-4.9.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/sts-4.9.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-11.0.11\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\UNIVALI\\Portugol Studio;C:\\Program Files\\Git\\cmd;C:\\gradle-7.2\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\apache-maven-3.8.3\\bin\\;C:\\Users\\Rcell Asus\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Rcell Asus\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Rcell Asus\\AppData\\Roaming\\npm;C:\\Users\\Rcell Asus\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2021.2.3\\bin;;C:\\Program Files\\heroku\\bin;C:\\Program Files\\MySQL\\mysql-8.0.26-winx64\\bin;;C:\\Program Files\\JetBrains\\PyCharm Community Edition 2021.3.2\\bin;;C:\\sts-4.9.0.RELEASE;;."
+},
+"java.vm.info": {
+"value": "mixed mode"
+},
+"java.vendor": {
+"value": "Oracle Corporation"
+},
+"java.vm.version": {
+"value": "15.0.2+7-27"
+},
+"java.rmi.server.hostname": {
+"value": "localhost"
+},
+"java.rmi.server.randomIDs": {
+"value": "true"
+},
+"sun.io.unicode.encoding": {
+"value": "UnicodeLittle"
+},
+"java.class.version": {
+"value": "59.0"
+}
+}
+},
+{
+"name": "systemEnvironment",
+"properties": {
+"USERDOMAIN_ROAMINGPROFILE": {
+"value": "FERNANDOSILVA",
+"origin": "System Environment Property \"USERDOMAIN_ROAMINGPROFILE\""
+},
+"LOCALAPPDATA": {
+"value": "C:\\Users\\Rcell Asus\\AppData\\Local",
+"origin": "System Environment Property \"LOCALAPPDATA\""
+},
+"PROCESSOR_LEVEL": {
+"value": "23",
+"origin": "System Environment Property \"PROCESSOR_LEVEL\""
+},
+"USERDOMAIN": {
+"value": "FERNANDOSILVA",
+"origin": "System Environment Property \"USERDOMAIN\""
+},
+"FPS_BROWSER_APP_PROFILE_STRING": {
+"value": "Internet Explorer",
+"origin": "System Environment Property \"FPS_BROWSER_APP_PROFILE_STRING\""
+},
+"LOGONSERVER": {
+"value": "\\\\FERNANDOSILVA",
+"origin": "System Environment Property \"LOGONSERVER\""
+},
+"JAVA_HOME": {
+"value": "C:\\Program Files\\Java\\jdk-11.0.11",
+"origin": "System Environment Property \"JAVA_HOME\""
+},
+"SESSIONNAME": {
+"value": "Console",
+"origin": "System Environment Property \"SESSIONNAME\""
+},
+"ALLUSERSPROFILE": {
+"value": "C:\\ProgramData",
+"origin": "System Environment Property \"ALLUSERSPROFILE\""
+},
+"PROCESSOR_ARCHITECTURE": {
+"value": "AMD64",
+"origin": "System Environment Property \"PROCESSOR_ARCHITECTURE\""
+},
+"PSModulePath": {
+"value": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+"origin": "System Environment Property \"PSModulePath\""
+},
+"SystemDrive": {
+"value": "C:",
+"origin": "System Environment Property \"SystemDrive\""
+},
+"MAVEN_HOME": {
+"value": "C:\\Program Files\\apache-maven-3.8.3",
+"origin": "System Environment Property \"MAVEN_HOME\""
+},
+"OneDrive": {
+"value": "C:\\Users\\Rcell Asus\\OneDrive",
+"origin": "System Environment Property \"OneDrive\""
+},
+"APPDATA": {
+"value": "C:\\Users\\Rcell Asus\\AppData\\Roaming",
+"origin": "System Environment Property \"APPDATA\""
+},
+"USERNAME": {
+"value": "Rcell Asus",
+"origin": "System Environment Property \"USERNAME\""
+},
+"ProgramFiles(x86)": {
+"value": "C:\\Program Files (x86)",
+"origin": "System Environment Property \"ProgramFiles(x86)\""
+},
+"CommonProgramFiles": {
+"value": "C:\\Program Files\\Common Files",
+"origin": "System Environment Property \"CommonProgramFiles\""
+},
+"Path": {
+"value": "C:/sts-4.9.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/sts-4.9.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-11.0.11\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\UNIVALI\\Portugol Studio;C:\\Program Files\\Git\\cmd;C:\\gradle-7.2\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\apache-maven-3.8.3\\bin\\;C:\\Users\\Rcell Asus\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Rcell Asus\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Rcell Asus\\AppData\\Roaming\\npm;C:\\Users\\Rcell Asus\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2021.2.3\\bin;;C:\\Program Files\\heroku\\bin;C:\\Program Files\\MySQL\\mysql-8.0.26-winx64\\bin;;C:\\Program Files\\JetBrains\\PyCharm Community Edition 2021.3.2\\bin;;C:\\sts-4.9.0.RELEASE;",
+"origin": "System Environment Property \"Path\""
+},
+"FPS_BROWSER_USER_PROFILE_STRING": {
+"value": "Default",
+"origin": "System Environment Property \"FPS_BROWSER_USER_PROFILE_STRING\""
+},
+"PATHEXT": {
+"value": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+"origin": "System Environment Property \"PATHEXT\""
+},
+"DriverData": {
+"value": "C:\\Windows\\System32\\Drivers\\DriverData",
+"origin": "System Environment Property \"DriverData\""
+},
+"OS": {
+"value": "Windows_NT",
+"origin": "System Environment Property \"OS\""
+},
+"OneDriveConsumer": {
+"value": "C:\\Users\\Rcell Asus\\OneDrive",
+"origin": "System Environment Property \"OneDriveConsumer\""
+},
+"COMPUTERNAME": {
+"value": "FERNANDOSILVA",
+"origin": "System Environment Property \"COMPUTERNAME\""
+},
+"IntelliJ IDEA Community Edition": {
+"value": "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2021.2.3\\bin;",
+"origin": "System Environment Property \"IntelliJ IDEA Community Edition\""
+},
+"PROCESSOR_REVISION": {
+"value": "1801",
+"origin": "System Environment Property \"PROCESSOR_REVISION\""
+},
+"CommonProgramW6432": {
+"value": "C:\\Program Files\\Common Files",
+"origin": "System Environment Property \"CommonProgramW6432\""
+},
+"ComSpec": {
+"value": "C:\\WINDOWS\\system32\\cmd.exe",
+"origin": "System Environment Property \"ComSpec\""
+},
+"PyCharm Community Edition": {
+"value": "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2021.3.2\\bin;",
+"origin": "System Environment Property \"PyCharm Community Edition\""
+},
+"ProgramData": {
+"value": "C:\\ProgramData",
+"origin": "System Environment Property \"ProgramData\""
+},
+"ProgramW6432": {
+"value": "C:\\Program Files",
+"origin": "System Environment Property \"ProgramW6432\""
+},
+"GRADLE-HOME": {
+"value": "C:\\Gradle\\gradle-7.2\\bin",
+"origin": "System Environment Property \"GRADLE-HOME\""
+},
+"HOMEPATH": {
+"value": "\\Users\\Rcell Asus",
+"origin": "System Environment Property \"HOMEPATH\""
+},
+"SystemRoot": {
+"value": "C:\\WINDOWS",
+"origin": "System Environment Property \"SystemRoot\""
+},
+"TEMP": {
+"value": "C:\\Users\\RCELLA~1\\AppData\\Local\\Temp",
+"origin": "System Environment Property \"TEMP\""
+},
+"HOMEDRIVE": {
+"value": "C:",
+"origin": "System Environment Property \"HOMEDRIVE\""
+},
+"PROCESSOR_IDENTIFIER": {
+"value": "AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD",
+"origin": "System Environment Property \"PROCESSOR_IDENTIFIER\""
+},
+"USERPROFILE": {
+"value": "C:\\Users\\Rcell Asus",
+"origin": "System Environment Property \"USERPROFILE\""
+},
+"TMP": {
+"value": "C:\\Users\\RCELLA~1\\AppData\\Local\\Temp",
+"origin": "System Environment Property \"TMP\""
+},
+"CommonProgramFiles(x86)": {
+"value": "C:\\Program Files (x86)\\Common Files",
+"origin": "System Environment Property \"CommonProgramFiles(x86)\""
+},
+"ProgramFiles": {
+"value": "C:\\Program Files",
+"origin": "System Environment Property \"ProgramFiles\""
+},
+"PUBLIC": {
+"value": "C:\\Users\\Public",
+"origin": "System Environment Property \"PUBLIC\""
+},
+"NUMBER_OF_PROCESSORS": {
+"value": "8",
+"origin": "System Environment Property \"NUMBER_OF_PROCESSORS\""
+},
+"windir": {
+"value": "C:\\WINDOWS",
+"origin": "System Environment Property \"windir\""
+},
+"=::": {
+"value": "::\\",
+"origin": "System Environment Property \"=::\""
+}
+}
+},
+{
+"name": "Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'",
+"properties": {
+"server.port": {
+"value": 8081,
+"origin": "class path resource [application.yml] - 2:9"
+},
+"spring.application.name": {
+"value": "greeting-service",
+"origin": "class path resource [application.yml] - 6:11"
+},
+"management.endpoints.web.exposure.include[0]": {
+"value": "*",
+"origin": "class path resource [application.yml] - 13:11"
+},
+"greeting-service.greeting": {
+"value": "Olá",
+"origin": "class path resource [application.yml] - 16:13"
+},
+"greeting-service.default-value": {
+"value": "Mundo",
+"origin": "class path resource [application.yml] - 17:18"
+}
+}
+},
+{
+"name": "devtools",
+"properties": {
+"spring.groovy.template.cache": {
+"value": "false"
+},
+"server.servlet.jsp.init-parameters.development": {
+"value": "true"
+},
+"spring.mvc.log-resolved-exception": {
+"value": "true"
+},
+"spring.web.resources.chain.cache": {
+"value": "false"
+},
+"spring.thymeleaf.cache": {
+"value": "false"
+},
+"spring.freemarker.cache": {
+"value": "false"
+},
+"server.error.include-stacktrace": {
+"value": "ALWAYS"
+},
+"spring.reactor.debug": {
+"value": "true"
+},
+"spring.mustache.cache": {
+"value": "false"
+},
+"spring.h2.console.enabled": {
+"value": "true"
+},
+"server.servlet.session.persistent": {
+"value": "true"
+},
+"server.error.include-binding-errors": {
+"value": "ALWAYS"
+},
+"spring.template.provider.cache": {
+"value": "false"
+},
+"server.error.include-message": {
+"value": "ALWAYS"
+},
+"spring.web.resources.cache.period": {
+"value": "0"
+}
+}
+}
+]
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
 ao acessar o endpoint de beans: http://localhost:8081/actuator/beans ele nos expos varios endpoints, detre eles o unico endpoint que criei;
 
 vaja abaixo os endpoints: 
