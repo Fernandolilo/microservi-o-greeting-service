@@ -58,3 +58,14 @@ seu resultado é:
 {
 "status": "UP"
 }
+
+#agora vamos liberar endpoints, para testes e saber sobre os endpoints 
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+passando estes paramentos no apllication.yml libera 13 endpoints que estavam bloqueados por padrão do Actuator
+
+veja os dados do console nos logs: Exposing 13 endpoint(s) beneath base path '/actuator'
