@@ -26,7 +26,8 @@ public class GreetingController {
 	private static final AtomicLong counter = new AtomicLong();
 
 	@RequestMapping("greeting")
-	public Greeting greeting(@RequestParam(value = "name", defaultValue = "") String name) {
+	public Greeting greeting(@RequestParam(value = "name", 
+			defaultValue = "") String name) {
 /*
  * como passamos parametros, setamos defaultValue como uma String vazia, e agora
  * importamos a configuration, abaixo estamos testando, se name vazio, passamos

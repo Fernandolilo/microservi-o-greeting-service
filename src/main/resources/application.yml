@@ -1,17 +1,20 @@
 server:
-  port: 8081
-
+  port: 8080
 spring:
   application:
     name: greeting-service
-#agora vamos liberar endpoints, para testes e saber sobre os endpoints 
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: prod
 management:
   endpoints:
     web:
       exposure:
         include:
         - '*'
-#propriedade especila para expor no endpoint
+
 greeting-service:
   greeting: "Olá"
   default-value: "Mundo"

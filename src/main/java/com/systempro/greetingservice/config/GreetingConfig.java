@@ -1,6 +1,7 @@
 package com.systempro.greetingservice.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 /*
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
  * no endpoint => @ConfigurationProperties("greeting-service")
  */
 @Component
+@RefreshScope
 @ConfigurationProperties("greeting-service")
 public class GreetingConfig {
 
@@ -16,10 +18,10 @@ public class GreetingConfig {
 
 	public GreetingConfig() {}
 
-	public GreetingConfig(String greeting, String defaultValue) {
-		this.greeting = greeting;
-		this.defaultValue = defaultValue;
-	}
+	/*
+	 * public GreetingConfig(String greeting, String defaultValue) { this.greeting =
+	 * greeting; this.defaultValue = defaultValue; }
+	 */
 
 	public String getGreeting() {
 		return greeting;
